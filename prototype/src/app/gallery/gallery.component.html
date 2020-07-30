@@ -1,0 +1,7 @@
+<nb-card>
+  <nb-card-body>
+    <section id="photo" *ngIf="loaded">
+      <app-image *ngFor="let key of imageKeys" [image]="images.get(key)"></app-image>
+    </section>
+  </nb-card-body>
+</nb-card>
