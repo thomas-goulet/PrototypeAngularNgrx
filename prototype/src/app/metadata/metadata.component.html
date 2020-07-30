@@ -1,22 +1,20 @@
-<nb-card *ngIf="imageObject.loaded">
+<nb-card *ngIf="image !== null">
   <nb-card-header>Image information</nb-card-header>
   <nb-list>
     <nb-list-item>
-      Date : {{imageObject.image.date}}
+      Date : {{image.date}}
     </nb-list-item>
     <nb-list-item>
-      Status : {{imageObject.image.status}}
+      Status : {{image.status}}
     </nb-list-item>
     <nb-list-item>
-      Type : {{imageObject.image.type}}
+      Type : {{image.type}}
     </nb-list-item>
     <nb-list-item>
-      Author : {{imageObject.image.author}}
+      Author : {{image.author}}
     </nb-list-item>
     <nb-list-item>
-      Comment : {{imageObject.image.comment}}
+      Comment : {{image.comment}}
     </nb-list-item>
   </nb-list>
 </nb-card>
-<button *ngIf="!imageObject.loaded" nbButton (click)="setImage()"> Load Details </button>
-<button *ngIf="imageObject.loaded" nbButton status="info" routerLink="edit/{{imageObject.image.id}}"> Edit Image </button>

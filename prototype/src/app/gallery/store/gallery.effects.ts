@@ -5,6 +5,7 @@ import {HttpClient} from "@angular/common/http";
 import * as GalleryActions from "./gallery.actions"
 import {map, switchMap} from "rxjs/operators";
 import {Image} from "../../models/image";
+import { ImagesService } from 'src/openapi';
 
 @Injectable()
 // @ts-ignore
@@ -12,7 +13,8 @@ export class GalleryEffects {
 
   constructor(
     private actions : Actions,
-    private http : HttpClient
+    private http : HttpClient,
+    private imageService: ImagesService
   ) {}
 
   @Effect()
@@ -20,7 +22,7 @@ export class GalleryEffects {
   loadImages = this.actions.pipe(
     ofType<GalleryActions.LoadImages>(GalleryActions.LOAD_IMAGES),
     switchMap(() => {
-      return this.http.get("http://localhost:8080/rest/images");
+      return this.imageService.searchImages();
     }),
     map( (images : {content}) => {
       return new Map(images.content.map(obj => [obj.id, obj]))
