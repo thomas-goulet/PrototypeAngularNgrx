@@ -7,20 +7,34 @@
     </nb-card>
   </nb-layout-column>
   <nb-layout-column>
-    <p>Date</p>
-    <input disabled nbInput fullWidth type="text" [value]="image.date">
-    <p>Author</p>
-    <input disabled nbInput fullWidth type="text" [value]="image.author">
-    <p>Status</p>
-    <input disabled nbInput fullWidth type="text" [value]="image.status">
-    <p>Type</p>
-    <input disabled nbInput fullWidth type="text" [value]="image.type">
-    <p>Tags</p>
-    <input disabled nbInput fullWidth type="text" [value]="image.tags">
-    <p>Location</p>
-    <input disabled nbInput type="text" [value]="image.location.coordinates[0]">
-    <input disabled nbInput type="text" [value]="image.location.coordinates[1]">
-    <p>Comment</p>
-    <input disabled nbInput fullWidth type="text" [value]="image.comment">
+    <div *ngIf="image.date != undefined">
+      <p>Date</p>
+      <input disabled nbInput fullWidth type="text" [value]="image.date">
+    </div>
+    <div *ngIf="image.author != undefined">
+      <p>Author</p>
+      <input disabled nbInput fullWidth type="text" [value]="image.author">
+    </div>
+    <div *ngIf="image.status != undefined">
+      <p>Status</p>
+      <input disabled nbInput fullWidth type="text" [value]="image.status">
+    </div>
+    <div *ngIf="image.type != undefined">
+      <p>Type</p>
+      <input disabled nbInput fullWidth type="text" [value]="image.type">
+    </div>
+    <div *ngIf="image.tags != undefined">
+      <p>Tags</p>
+      <input disabled nbInput fullWidth type="text" [value]="image.tags">
+    </div>
+    <div *ngIf="image.location != undefined">
+      <p>Location</p>
+      <input disabled nbInput type="text" [value]="image.location.coordinates[0]">
+      <input disabled nbInput type="text" [value]="image.location.coordinates[1]">
+    </div>
+    <div *ngIf="image.comment != undefined">
+      <p>Comment</p>
+      <input disabled nbInput fullWidth type="text" [value]="image.comment">
+    </div>
   </nb-layout-column>
 </nb-layout>

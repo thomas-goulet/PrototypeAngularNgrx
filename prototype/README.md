@@ -1,8 +1,16 @@
 # Prototype
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
+This project is a prototype that uses the PrivateRestAPI from IWLS
 
-## Development server
+## Functionality
+
+The homepage is a gallery that displays all images available in the database
+
+Hovering on an image in the gallery shows information relevant to the image
+
+Clicking on an image brings you to a new page where you can see the image's metadata
+
+## How to run
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
