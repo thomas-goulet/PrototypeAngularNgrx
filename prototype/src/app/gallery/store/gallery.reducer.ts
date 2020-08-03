@@ -1,20 +1,20 @@
-import {Image} from "../../models/image";
-import * as GalleryActions from "./gallery.actions"
+import {Image} from '../../models/image';
+import * as GalleryActions from './gallery.actions';
 
 export interface State {
-  images: Map<String, Image>
-  loaded: boolean
+  images: Map<string, Image>;
+  loaded: boolean;
 }
 
 const initialState = {
-  images: new Map([["key", new Image()]]),
+  images: new Map([['key', new Image()]]),
   loaded: false
-}
+};
 
 export function galleryReducer(
-  state : State = initialState,
-  action : GalleryActions.Actions
-) {
+  state: State = initialState,
+  action: GalleryActions.Actions
+): State {
   switch (action.type) {
     case GalleryActions.LOAD_IMAGES:
       return state;

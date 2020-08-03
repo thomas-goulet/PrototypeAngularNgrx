@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import {Routes, RouterModule} from '@angular/router';
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
-import {StoreModule} from "@ngrx/store";
+import {StoreModule} from '@ngrx/store';
 
 import {
   NbCardModule,
@@ -14,7 +14,7 @@ import {
   NbButtonModule,
   NbPopoverModule,
   NbListModule, NbInputModule,
-} from "@nebular/theme";
+} from '@nebular/theme';
 
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
@@ -22,11 +22,11 @@ import { ImageComponent } from './image/image.component';
 import { MetadataComponent } from './metadata/metadata.component';
 import { EditImageComponent } from './edit-image/edit-image.component';
 
-import * as fromApp from "./store/app.reducer"
-import {GalleryEffects} from "./gallery/store/gallery.effects";
-import {EditImageEffects} from "./edit-image/store/edit-image.effects";
+import * as fromApp from './store/app.reducer';
+import {GalleryEffects} from './gallery/store/gallery.effects';
+import {EditImageEffects} from './edit-image/store/edit-image.effects';
 
-const routes : Routes = [
+const routes: Routes = [
   {path: '', component: GalleryComponent},
   {path: 'edit/:id', component: EditImageComponent}
 ];

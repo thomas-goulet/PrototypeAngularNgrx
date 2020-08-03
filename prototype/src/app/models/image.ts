@@ -1,14 +1,14 @@
 export class Image {
 
-  id : String;
-  date: String;
-  type: String;
-  status: String;
-  author: String;
-  comment: String;
+  id: string;
+  date: string;
+  type: string;
+  status: string;
+  author: string;
+  comment: string;
   gpsDirection: number;
-  latestUrl: String;
-  location: {coordinates: number[], type: String};
-  tags: String[];
+  latestUrl: string;
+  location: {coordinates: number[], type: string};
+  tags: string[];
 
 }

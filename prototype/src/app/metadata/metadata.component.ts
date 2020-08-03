@@ -1,11 +1,5 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Image} from "../models/image";
-
-import * as MetadataActions from "./store/metadata.actions"
-import {Subscription} from "rxjs";
-import {Store} from "@ngrx/store";
-import {AppState} from "../store/app.reducer";
-import {map} from "rxjs/operators";
+import {Component, Input} from '@angular/core';
+import {Image} from '../models/image';
 
 @Component({
   selector: 'app-metadata',
@@ -14,6 +8,6 @@ import {map} from "rxjs/operators";
 })
 export class MetadataComponent {
 
-  @Input("image") image : Image;
+  @Input() image: Image;
 
 }
