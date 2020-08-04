@@ -1,5 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {MetadataComponent} from '../metadata/metadata.component';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-image',
@@ -9,8 +8,6 @@ import {MetadataComponent} from '../metadata/metadata.component';
 export class ImageComponent {
 
   @Input() image: {id, latestUrl};
-
-  metadata = MetadataComponent;
 
   constructor() { }
 
