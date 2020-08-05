@@ -5,7 +5,7 @@ export interface State {
   data: {key: string, loaded: boolean, image: Image}[];
 }
 
-const initialState: State = {
+export const initialState: State = {
   data: [{key: null, loaded: false, image: null}]
 };
 
@@ -16,7 +16,6 @@ export function editImageReducer(
   switch (action.type) {
     case EditImageActions.ADD_METADATA:
       console.log('ADD_METADATA CALLED');
-      console.log(action.payload);
       return {
         ...state,
         data: [...state.data, {key: action.payload.id, loaded: true, image: action.payload}]

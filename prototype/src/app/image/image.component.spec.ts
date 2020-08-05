@@ -16,10 +16,16 @@ describe('ImageComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ImageComponent);
     component = fixture.componentInstance;
+    console.log('Component', component);
+    component.image = {
+      id: '326236234623423',
+      latestUrl: 'image.png'
+    };
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

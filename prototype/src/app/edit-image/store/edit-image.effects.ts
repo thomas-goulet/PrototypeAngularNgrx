@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import * as EditImageActions from './edit-image.actions';
 import {map, switchMap} from 'rxjs/operators';
 import {Image} from '../../models/image';
-import {ImagesService} from "../../../openapi";
+import {ImagesService} from '../../../openapi';
 
 @Injectable()
 // @ts-ignore

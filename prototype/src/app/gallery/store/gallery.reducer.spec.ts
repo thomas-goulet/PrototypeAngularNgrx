@@ -15,8 +15,8 @@ describe('GalleryReducer', () => {
       const action = new fromActions.LoadImages();
       const state = fromReducer.galleryReducer(initialState, action);
 
-      console.log(state);
-      console.log(expectedState);
+      // console.log(state);
+      // console.log(expectedState);
 
       expect(state).toEqual(expectedState);
     });
